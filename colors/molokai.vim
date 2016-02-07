@@ -1,10 +1,10 @@
-  
+
 " Vim color file
 "
 " Author: Tomas Restrepo <tomas@winterdom.com>
 "
 " Note: Based on the monokai theme for textmate
-" by Wimer Hazenberg and its darker variant 
+" by Wimer Hazenberg and its darker variant
 " by Hamish Stuart Macpherson
 "
 
@@ -35,6 +35,8 @@ hi String          guifg=#E6DB74
 hi Conditional     guifg=#F92672               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
+" hi CursorColumn    guifg=#FFFF00 guibg=#005FFF
+hi CursorColumn    guibg=darkred guifg=white
 hi iCursor         guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
 hi Define          guifg=#66D9EF
@@ -112,7 +114,7 @@ if s:molokai_original == 1
    hi Comment         guifg=#75715E
    hi CursorLine                    guibg=#3E3D32
    hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#3E3D32
+   " hi CursorColumn                  guibg=#3E3D32
    " hi ColorColumn                   guibg=#3B3A32
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#75715E
@@ -122,7 +124,7 @@ else
    hi Comment         guifg=#7E8E91
    hi CursorLine                    guibg=#293739
    hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#293739
+   " hi CursorColumn                  guibg=#293739
    " hi ColorColumn                   guibg=#232526
    hi LineNr          guifg=#465457 guibg=#232526
    hi NonText         guifg=#465457
@@ -149,6 +151,9 @@ if &t_Co > 255
    hi Conditional     ctermfg=161               cterm=bold
    hi Constant        ctermfg=135               cterm=bold
    hi Cursor          ctermfg=16  ctermbg=253
+   " hi CursorColumn    ctermfg=226 ctermbg=27
+   " hi CursorColumn    ctermfg=16  ctermbg=208 cterm=bold
+   hi CursorColumn    ctermbg=darkred ctermfg=white
    hi Debug           ctermfg=225               cterm=bold
    hi Define          ctermfg=81
    hi Delimiter       ctermfg=241
@@ -196,10 +201,10 @@ if &t_Co > 255
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
-   hi Special         ctermfg=81 
+   hi Special         ctermfg=81
    if has("spell")
-       hi SpellBad                ctermbg=52   
-       hi SpellCap                ctermbg=17   
+       hi SpellBad                ctermbg=52
+       hi SpellCap                ctermbg=17
        hi SpellLocal              ctermbg=17
        hi SpellRare  ctermfg=none ctermbg=none  cterm=reverse
    endif
@@ -223,13 +228,12 @@ if &t_Co > 255
    hi WildMenu        ctermfg=81  ctermbg=16
 
    hi Comment         ctermfg=59
-   hi CursorColumn                ctermbg=234
-   " hi ColorColumn                 ctermbg=234
+   " hi CursorColumn                ctermbg=234
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=59
 
    hi SpecialKey      ctermfg=59
-   
+
    if exists("g:rehash256") && g:rehash256 == 1
        hi Normal       ctermfg=252 ctermbg=234
        hi CursorLine               ctermbg=236   cterm=none
@@ -256,7 +260,7 @@ if &t_Co > 255
        hi PreCondit       ctermfg=154               cterm=bold
        hi PreProc         ctermfg=154
        hi Repeat          ctermfg=197               cterm=bold
-       
+
        hi Statement       ctermfg=197               cterm=bold
        hi Tag             ctermfg=197
        hi Title           ctermfg=203
